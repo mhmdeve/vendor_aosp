@@ -1,2 +1,2 @@
-# Inherit full common PixelExperience stuff
-$(call inherit-product, vendor/aosp/config/common_full.mk)
+# Inherit full common PixelPlusUI stuff
+$(call inherit-product, vendor/ppui/config/common_full.mk)
