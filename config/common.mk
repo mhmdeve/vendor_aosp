@@ -94,12 +94,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
-    vendor/ppui/overlay \
-#    vendor/ppui/overlay-pixel \
+    vendor/ppui/overlay
 
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/ppui/overlay/common \
-#    vendor/ppui/overlay-pixel/common
+    vendor/ppui/overlay/common
 
 # TouchGestures
 PRODUCT_PACKAGES += \
@@ -172,13 +170,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true
 
 # Pixel customization
-#TARGET_SUPPORTS_GOOGLE_RECORDER ?= true
-#TARGET_INCLUDE_STOCK_ARCORE ?= true
-#TARGET_INCLUDE_LIVE_WALLPAPERS ?= true
-#ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
-#PRODUCT_PACKAGES += \
-#    PixelLiveWallpapersOverlay
-#endif
+TARGET_SUPPORTS_GOOGLE_RECORDER ?= true
+TARGET_INCLUDE_STOCK_ARCORE ?= true
+TARGET_INCLUDE_LIVE_WALLPAPERS ?= true
+ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
+PRODUCT_PACKAGES += \
+    PixelLiveWallpapersOverlay
+endif
 
 # Face Unlock
 #TARGET_FACE_UNLOCK_SUPPORTED ?= true
