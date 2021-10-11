@@ -38,6 +38,10 @@ PRODUCT_COPY_FILES += \
     vendor/ppui/config/permissions/backup.xml:system/etc/sysconfig/backup.xml \
     vendor/ppui/config/permissions/privapp-permissions-lineagehw.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-lineagehw.xml
 
+PRODUCT_COPY_FILES += \
+    vendor/ppui/config/permissions/privapp-permissions-pb-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pb-product.xml \
+    vendor/ppui/config/permissions/privapp-permissions-google_prebuilt.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google_prebuilt.xml
+
 # Copy all custom init rc files
 $(foreach f,$(wildcard vendor/ppui/prebuilt/common/etc/init/*.rc),\
     $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
