@@ -97,11 +97,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     vendor/ppui/overlay \
-    vendor/ppui/overlay-pixel \
+#    vendor/ppui/overlay-pixel \
 
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/ppui/overlay/common \
-    vendor/ppui/overlay-pixel/common
+#    vendor/ppui/overlay-pixel/common
 
 # TouchGestures
 PRODUCT_PACKAGES += \
