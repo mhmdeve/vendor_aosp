@@ -67,7 +67,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
 
 # Gapps
-$(call inherit-product, vendor/aosp/config/gapps.mk)
+#$(call inherit-product, vendor/aosp/config/gapps.mk)
 
 # Power whitelist
 PRODUCT_COPY_FILES += \
