@@ -168,13 +168,13 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.iorapd.enable=true
 
 # Pixel customization
-TARGET_SUPPORTS_GOOGLE_RECORDER ?= true
-TARGET_INCLUDE_STOCK_ARCORE ?= true
-TARGET_INCLUDE_LIVE_WALLPAPERS ?= true
-ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
-PRODUCT_PACKAGES += \
-    PixelLiveWallpapersOverlay
-endif
+#TARGET_SUPPORTS_GOOGLE_RECORDER ?= true
+#TARGET_INCLUDE_STOCK_ARCORE ?= true
+#TARGET_INCLUDE_LIVE_WALLPAPERS ?= true
+#ifeq ($(TARGET_INCLUDE_LIVE_WALLPAPERS),true)
+#PRODUCT_PACKAGES += \
+#    PixelLiveWallpapersOverlay
+#endif
 
 # Face Unlock
 #TARGET_FACE_UNLOCK_SUPPORTED ?= true
@@ -194,7 +194,7 @@ $(call inherit-product, vendor/ppui/config/audio.mk)
 $(call inherit-product, vendor/ppui/config/bootanimation.mk)
 
 # Fonts
-$(call inherit-product, vendor/ppui/config/fonts.mk)
+#$(call inherit-product, vendor/ppui/config/fonts.mk)
 
 # GApps
 #$(call inherit-product, vendor/gapps/config.mk)
@@ -203,6 +203,6 @@ $(call inherit-product, vendor/ppui/config/fonts.mk)
 $(call inherit-product, vendor/ppui/config/ota.mk)
 
 # RRO Overlays
-$(call inherit-product, vendor/ppui/config/rro_overlays.mk)
+#$(call inherit-product, vendor/ppui/config/rro_overlays.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
