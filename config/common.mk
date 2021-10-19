@@ -215,7 +215,4 @@ $(call inherit-product, vendor/ppui/config/ota.mk)
 # RRO Overlays
 $(call inherit-product, vendor/ppui/config/rro_overlays.mk)
 
-# Pixel Framework
-$(call inherit-product-if-exists, vendor/pixel-framework/config.mk)
-
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
