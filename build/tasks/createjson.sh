@@ -35,7 +35,7 @@ if [ -f $existingOTAjson ]; then
 	v_max=`echo "$version" | cut -d'.' -f1 | cut -d'v' -f2`
 	v_min=`echo "$version" | cut -d'.' -f2`
 	version=`echo $v_max.$v_min`
-	download="https://sourceforge.net/projects/evolutionx-guacamole/files/'$device'/'$v_max'.x/'$4'/download"
+	download="https://download.ppui.site/eleven/'$device/'$4'"
 	buildprop=$2/system/build.prop
 	linenr=`grep -n "ro.build.date.utc" $buildprop | cut -d':' -f1`
 	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
