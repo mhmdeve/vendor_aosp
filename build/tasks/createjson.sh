@@ -37,7 +37,7 @@ if [ -f $existingOTAjson ]; then
 	version=`echo $v_max.$v_min`
 	download="https://sourceforge.net/projects/evolutionx-guacamole/files/'$device'/'$v_max'.x/'$4'/download"
 	buildprop=$2/system/build.prop
-	linenr=`grep -n "ro.system.build.date.utc" $buildprop | cut -d':' -f1`
+	linenr=`grep -n "ro.build.date.utc" $buildprop | cut -d':' -f1`
 	timestamp=`sed -n $linenr'p' < $buildprop | cut -d'=' -f2`
 	md5=`md5sum "$2/$3" | cut -d' ' -f1`
 	sha256=`sha256sum "$2/$3" | cut -d' ' -f1`
