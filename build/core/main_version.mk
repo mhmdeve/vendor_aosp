@@ -27,3 +27,9 @@ ADDITIONAL_SYSTEM_PROPERTIES  += \
     org.pixelplusui.build_type=$(CUSTOM_BUILD_TYPE) \
     org.pixelplusui.codename=$(PPUI_CODENAME) \
     ro.pixelplusui.maintainer=$(PPUI_MAINTAINER)
+
+# To Allow/Deny Downgrade Build
+ifneq ($(ALLOW_DOWNGRADE),true)
+ADDITIONAL_SYSTEM_PROPERTIES  += \
+	pixelplusui.updater.allow_downgrading=true
+endif
